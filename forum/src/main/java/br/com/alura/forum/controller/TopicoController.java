@@ -22,4 +22,19 @@ public class TopicoController {
 		return topicoRepository.findAll();
 	}
 	
+	@GetMapping("porTituloJPQL")
+	public List<Topico> todosOsTopicosJQPL(String titulo){
+		return topicoRepository.topicoPorTituloJPQL(titulo);
+	}
+	
+	@GetMapping("porTituloSQL")
+	public List<Topico> todosOsTopicosSQL(String titulo){
+		return topicoRepository.topicoPorTituloSQL(titulo);
+	}
+	
+	@GetMapping("porTitulo")
+	public List<Topico> todosOsTopicosPorTitulo(String titulo){
+		return topicoRepository.findByTitulo(titulo);
+	}
+	
 }
