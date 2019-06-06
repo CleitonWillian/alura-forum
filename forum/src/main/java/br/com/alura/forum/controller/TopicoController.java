@@ -7,20 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.alura.forum.entity.Usuario;
-import br.com.alura.forum.repository.UsuarioRepository;
+import br.com.alura.forum.entity.Topico;
+import br.com.alura.forum.repository.TopicoRepository;
 
 @RestController
-@RequestMapping(path = "usuarios")
-public class UsuarioController {
+@RequestMapping(path = "topicos")
+public class TopicoController {
 
 	@Autowired
-	UsuarioRepository repository;
-
+	private TopicoRepository topicoRepository;
+	
 	@GetMapping
-	public List<Usuario> todosUsuarios() {
-		return repository.findAll();
-
+	public List<Topico> todosOsTopicos(){
+		return topicoRepository.findAll();
 	}
-
+	
 }
