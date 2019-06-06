@@ -18,6 +18,17 @@ public class Usuario {
 	private String nome;
 	private LocalDate criadoEm;
 
+	public Usuario(String nome, String email) {
+		this.nome = nome;
+		this.email = email;
+		this.criadoEm = LocalDate.now();
+	}
+	
+	public Usuario(String nome, String email, LocalDate criadoEm) {
+		this.nome = nome;
+		this.email = email;
+		this.criadoEm = criadoEm;
+	}
 
 	
 
